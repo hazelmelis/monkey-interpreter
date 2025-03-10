@@ -34,7 +34,7 @@ func (l *Lexer) readIdentifier() string {
 }
 
 func (l *Lexer) skipWhitespace() {
-	for l.ch == ' ' || l.ch == '\t' || l.ch == '\r' {
+	for l.ch == ' ' || l.ch == '\t' || l.ch == '\r' || l.ch == '\n' {
 		l.readChar()
 	}
 }
